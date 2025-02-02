@@ -1,0 +1,117 @@
+.works-container {
+    border-top: 1px solid rgb(59, 41, 41);
+    text-align: center;
+    padding: 2rem;
+    background-color: #181414;
+  }
+
+
+  .works-title {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: bold;
+    color: #DAA520; /* Goldenrod */
+
+}
+  
+  .works-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .work-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .work-item .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Reduced border-radius */
+    width: 250px; /* Increased image size */
+    height: 300px; /* Increased image size */
+  }
+  
+  .work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .work-text {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .work-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .work-item.hovered {
+    transform: scale(1.25); /* Increased hover effect */
+    z-index: 2;
+  }
+  
+  .work-item.shrunk {
+    transform: scale(0.8); /* Slightly more shrink effect */
+    opacity: 0.7;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .image-container {
+      width: 280px;
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    .works-container{
+      margin-top: 15%;
+    }
+    .works-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container {
+      width: 260px;
+      height: 325px;
+      
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .works-title {
+      font-size: 2rem;
+
+    }
+  
+    .work-text {
+      font-size: 1rem;
+    }
+  
+    .image-container {
+      width: 220px;
+      height: 275px;
+    }
+  }
+  

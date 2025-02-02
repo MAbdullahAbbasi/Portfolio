@@ -1,0 +1,100 @@
+.education-container {
+    background: linear-gradient(to right, #181111, #130c0c); /* Dark gray to light gray gradient */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-title {
+    font-size: 3rem;
+    color: #DAA520; /* Goldenrod */
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.education-card {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Slight background effect */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.education-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.degree-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.degree-title {
+    font-size: 2rem;
+    color: #DAA520;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.institution {
+    font-size: 1.4rem;
+    color: #B0C4DE; /* LightSteelBlue */
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.graduation-year {
+    font-size: 1.3rem;
+    color: #ADD8E6; /* LightBlue */
+    margin-top: 10px;
+}
+
+.degree-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #D3D3D3;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        padding: 30px 15px;
+    }
+
+    .education-title {
+        font-size: 2.2rem;
+    }
+
+    .education-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .degree-title {
+        font-size: 1.7rem;
+    }
+
+    .institution {
+        font-size: 1.2rem;
+    }
+
+    .graduation-year,
+    .degree-description {
+        font-size: 1rem;
+    }
+}

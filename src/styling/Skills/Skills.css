@@ -1,0 +1,227 @@
+.skills-container {
+  border-top: 1px solid rgb(46, 26, 26);
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  color: white; /* White text */
+  background-color: rgb(8, 6, 6);
+}
+
+/* Left-aligned large heading in orange */
+.skills-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #DAA520; /* Orange */
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* Skills Wrapper (Side by Side Layout) */
+.skills-wrapper {
+  display: flex;
+  align-items: flex-start; /* Aligns items at the top */
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Sidebar for Skill Categories */
+.skills-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 250px;
+  counter-reset: skill-counter; /* Reset counter for the list of skills */
+  flex: 1; /* Take up 50% of the space */
+}
+
+/* Skill category button styling */
+.skill-category {
+  padding: 0.75rem 1.5rem;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  color: white; /* White text */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  position: relative; /* Positioning for the circle */
+}
+
+/* Numbered circle before each skill */
+.skill-category::before {
+  content: counter(skill-counter); /* Display number */
+  border: 1px solid white;
+  color: white;
+  width: 30px; /* Circle size */
+  height: 30px; /* Circle size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Make it a circle */
+  position: absolute;
+  left: -40px; /* Position it to the left */
+  font-size: 1.2rem;
+  counter-increment: skill-counter; /* Increment counter for each skill */
+}
+
+/* Hover effect for skills */
+.skill-category:hover {
+  font-size: 2rem;
+  text-shadow: 7px 7px 7px rgba(250, 250, 250, 0.5); /* Background text shadow */
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+/* Active skill - scale up on click */
+.skill-category.active {
+  font-size: 2rem;
+  transform: scale(1.05); /* Same scale effect as hover */
+  text-shadow: 5px 5px 5px rgba(250, 250, 250, 0.5); /* Background text shadow */
+}
+
+/* Subskills - Displayed in a Column */
+.subskills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
+  justify-content: center; /* Vertically center the content */
+  text-align: center; /* Center align the text */
+  counter-reset: subskill-counter; /* Initialize counter for numbering */
+  background-position: right; /* Position the image on the right */
+  background-size: cover; /* Ensure the image covers the background area */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  flex: 1; /* Take up 50% of the space */
+  height: 100%; /* Full height to cover the component */
+  padding-right: 20px; /* Optional: adds spacing between the content and the right edge */
+  padding-left: 20px; /* Optional: adds spacing between the content and the left edge */
+}
+
+/* No heading for subskills, just list */
+.subskills-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Subskill styling */
+.subskill {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white; /* White text */
+  display: flex;
+  position: relative;
+  padding-left: 40px; /* Space for the arrow */
+  counter-increment: subskill-counter; /* Increment counter for each subskill */
+}
+
+/* Arrow before each subskill */
+.subskill::before {
+  content: "➤"; /* Unicode arrow */
+  color: #DAA520; /* Golden color */
+  margin-right: 0.75rem;
+  font-size: 1.3rem;
+}
+
+
+@media (max-width: 1024px) {
+  .skills-container {
+    width: 90%; /* Reduce the width for better fit */
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  .skills-title {
+    font-size: 3rem; /* Adjust heading size */
+  }
+
+  .skills-wrapper {
+    flex-direction: column; /* Stack sidebar and subskills vertically */
+    gap: 1rem; /* Adjust gap for stacking */
+  }
+
+  .skills-sidebar {
+    flex: none; /* Remove flex-grow on smaller screens */
+    min-width: 100%; /* Sidebar takes full width */
+  }
+
+  .subskills-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .skill-category {
+    font-size: 1.8rem; /* Adjust button text size */
+  }
+
+  .subskill {
+    font-size: 1.4rem; /* Adjust subskill text size */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .skills-container {
+    width: 95%; /* Increase width to use more screen space */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .skills-title {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+
+  .skills-wrapper {
+    flex-direction: column; /* Stack sidebar and subskills vertically */
+    gap: 0.5rem; /* Adjust gap for stacking */
+  }
+
+  .skills-sidebar {
+    flex: none; /* Remove flex-grow */
+    min-width: 100%;
+  }
+
+  .subskills-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .skill-category {
+    font-size: 1.6rem; /* Adjust button text size */
+  }
+
+  .subskill {
+    font-size: 1.2rem; /* Adjust subskill text size */
+  }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+  .skills-container {
+    width: 100%; /* Full width for very small screens */
+    padding: 0.75rem; /* Further reduce padding */
+  }
+
+  .skills-title {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .skills-wrapper {
+    flex-direction: column; /* Stack sidebar and subskills vertically */
+    gap: 0.25rem; /* Adjust gap for stacking */
+  }
+
+  .skills-sidebar {
+    flex: none;
+    min-width: 100%;
+  }
+
+  .subskills-container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .skill-category {
+    font-size: 1.5rem; /* Adjust button text size */
+  }
+
+  .subskill {
+    font-size: 1rem; /* Adjust subskill text size */
+  }
+}
