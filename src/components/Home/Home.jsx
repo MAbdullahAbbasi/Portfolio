@@ -5,16 +5,18 @@ import WorkExperience from '../WorkExperience/WorkExperience';
 import Education from '../Education/Education';
 import Skills from '../Skills/Skills';
 import Works from '../Works/Works';
+import WhatsApp from '../Whatsapp/Whatsapp';
 
 const Home = () => {
     return (
-        <div>
+        <div className="home-container" style={{position: 'relative'}}>
             <Navbar />
             <Hero />
             <Works />
             <WorkExperience />
             <Education />
             <Skills />
+            <WhatsApp /> {/* This will now move with the page */}
         </div>
     );
 }

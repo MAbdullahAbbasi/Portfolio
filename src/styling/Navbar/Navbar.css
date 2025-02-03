@@ -61,12 +61,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(8px);
-  z-index: 999;
+  backdrop-filter: blur(8px); /* Apply the blur effect */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Ensure the overlay sits above other content */
+  display: block; /* Ensure overlay is displayed when isOpen is true */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+
+  
   .navbar-links {
     display: flex;
     flex-direction: column;
@@ -75,7 +79,7 @@
     left: -250px; /* Start hidden */
     width: 250px;
     height: 100vh;
-    background: transparent; /* No background */
+    background: transparent; 
     padding-top: 60px;
     transition: left 0.3s ease-in-out;
     z-index: 1002;
@@ -109,5 +113,3 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
-
-

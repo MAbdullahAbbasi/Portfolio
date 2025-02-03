@@ -1,0 +1,16 @@
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp-image {
+    width: 64px; /* Adjust size as needed */
+    height: 64px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.whatsapp-image:hover {
+    opacity: 0.8;
+}

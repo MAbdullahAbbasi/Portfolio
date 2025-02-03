@@ -46,6 +46,8 @@
   color: white; /* White text */
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
   position: relative; /* Positioning for the circle */
+  border-bottom: 1px solid rgb(44, 25, 25);
+  box-shadow: 0 4px 8px 0 rgba(48, 39, 39, 0.2), 0 6px 20px 0 rgba(36, 29, 29, 0.19);
 }
 
 /* Numbered circle before each skill */
@@ -62,21 +64,23 @@
   position: absolute;
   left: -40px; /* Position it to the left */
   font-size: 1.2rem;
-  counter-increment: skill-counter; /* Increment counter for each skill */
+  counter-increment: skill-counter;
 }
 
 /* Hover effect for skills */
 .skill-category:hover {
   font-size: 2rem;
-  text-shadow: 7px 7px 7px rgba(250, 250, 250, 0.5); /* Background text shadow */
+  text-shadow: 3px 3px 3px rgba(250, 250, 250, 0.5); /* Background text shadow */
   transform: scale(1.05); /* Slight scale-up effect on hover */
+  box-shadow: 0 4px 8px 0 rgba(136, 136, 136, 0.2), 0 6px 20px 0 rgba(124, 124, 124, 0.19);
 }
 
 /* Active skill - scale up on click */
 .skill-category.active {
   font-size: 2rem;
   transform: scale(1.05); /* Same scale effect as hover */
-  text-shadow: 5px 5px 5px rgba(250, 250, 250, 0.5); /* Background text shadow */
+  text-shadow: 2px 2px 2px rgba(250, 250, 250, 0.5); /* Background text shadow */
+  box-shadow: 0 4px 8px 0 rgba(238, 238, 238, 0.2), 0 6px 20px 0 rgba(243, 243, 243, 0.19);
 }
 
 /* Subskills - Displayed in a Column */
@@ -94,6 +98,7 @@
   height: 100%; /* Full height to cover the component */
   padding-right: 20px; /* Optional: adds spacing between the content and the right edge */
   padding-left: 20px; /* Optional: adds spacing between the content and the left edge */
+  border-left: 1px solid rgb(44, 25, 25);
 }
 
 /* No heading for subskills, just list */

@@ -19,6 +19,7 @@ const Works = () => {
   return (
     <div className="works-container">
       <h1 className="works-title">My Works</h1>
+      <p className="works-title-line">Projects I've Worked on</p>
       <div className="works-grid">
         {projects.map((project, index) => (
           <Link
