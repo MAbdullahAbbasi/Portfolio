@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styling/Navbar/Navbar.css';
+import cv from '../../files/MAbdullahAbbasiCV.pdf';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('Home'); // Set default active link to 'Home'
@@ -27,19 +28,27 @@ const Navbar = () => {
         </div>
 
         {/* Sliding Menu */}
+        {/* Sliding Menu */}
         <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
           {['Home', 'My Work', 'About Me', 'Contact Me', 'Download CV'].map((link) => (
             <li key={link} className="navbar-item">
-              <Link
-                to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
-                onClick={() => handleLinkClick(link)}
-                className={`navbar-link ${activeLink === link ? 'active' : ''}`}
-              >
-                {link}
-              </Link>
+              {link === 'Download CV' ? (
+                <a href = {cv} download="MAbdullahAbbasiCV.pdf" className="navbar-link">
+                  {link}
+                </a>
+              ) : (
+                <Link
+                  to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                  onClick={() => handleLinkClick(link)}
+                  className={`navbar-link ${activeLink === link ? 'active' : ''}`}
+                >
+                  {link}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
+
       </nav>
     </>
   );

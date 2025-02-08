@@ -16,7 +16,7 @@ const Home = () => {
             <WorkExperience />
             <Education />
             <Skills />
-            <WhatsApp /> {/* This will now move with the page */}
+            <WhatsApp />
         </div>
     );
 }
