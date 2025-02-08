@@ -8,7 +8,7 @@
 
 .whatsapp-container a{
     display: block;
-    margin: 5px;
+    margin-top: 15px;
 }
 
 .whatsapp-image, .linkedin-image, .gmail-image {
@@ -41,5 +41,10 @@
     .linkedin-image {
         width: 42px; /* Adjust size as needed */
         height: 42px;
+    }
+
+    .gmail-image {
+        width: 42px; /* Adjust size as needed */
+        height: 33px;
     }
 }
