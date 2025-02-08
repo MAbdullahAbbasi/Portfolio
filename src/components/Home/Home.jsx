@@ -6,6 +6,7 @@ import Education from '../Education/Education';
 import Skills from '../Skills/Skills';
 import Works from '../Works/Works';
 import WhatsApp from '../Whatsapp/Whatsapp';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
@@ -17,10 +18,12 @@ const Home = () => {
     
             <Hero />
             <Works />
-            <WorkExperience />
             <Education />
+            <WorkExperience />
             <Skills />
             <WhatsApp />
+
+            <Footer />
         </div>
     );
 }

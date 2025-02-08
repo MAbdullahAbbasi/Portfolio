@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Sliding Menu */}
         {/* Sliding Menu */}
         <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
-          {['Home', 'My Work', 'About Me', 'Contact Me', 'Download CV'].map((link) => (
+          {['Home', 'My Work', 'About Me', 'My Skills', 'Download CV'].map((link) => (
             <li key={link} className="navbar-item">
               {link === 'Download CV' ? (
                 <a href = {cv} download="MAbdullahAbbasiCV.pdf" className="navbar-link">

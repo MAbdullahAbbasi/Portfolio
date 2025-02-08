@@ -1,16 +1,45 @@
 .whatsapp-container {
+    /* border: 2px solid white; */
+    /* padding: 2%; */
     position: fixed;
     bottom: 20px;
     right: 20px;
 }
 
-.whatsapp-image {
+.whatsapp-container a{
+    display: block;
+    margin: 5px;
+}
+
+.whatsapp-image, .linkedin-image, .gmail-image {
     width: 64px; /* Adjust size as needed */
     height: 64px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease-in-out;
 }
 
-.whatsapp-image:hover {
+.linkedin-image{
+    height: 60px;
+    width: 60px;
+}
+
+.gmail-image{
+    border-radius: 5px;
+    height: 40px;
+    width: 60px;
+}
+
+.whatsapp-image:hover, .linkedin-image:hover, .gmail-image:hover{
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-image {
+        width: 44px; /* Adjust size as needed */
+        height: 44px;
+    }
+
+    .linkedin-image {
+        width: 42px; /* Adjust size as needed */
+        height: 42px;
+    }
 }
