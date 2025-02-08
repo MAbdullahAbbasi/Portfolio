@@ -8,6 +8,7 @@ const WhatsApp = () => {
         <div className="whatsapp-container">
         <a
           href="https://wa.me/923456265572?text=Hello%20Abdullah!%20I'm%20interested%20in%20your%20services."
+          target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-4 right-4 z-50"
         >
