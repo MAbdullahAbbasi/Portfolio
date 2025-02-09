@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom';
 import '../../styling/Navbar/Navbar.css';
 import cv from '../../files/MAbdullahAbbasiCV.pdf';
 
-const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('Home'); // Set default active link to 'Home'
+const Navbar = ({ scrollToSection, heroRef, worksRef, educationRef, skillsRef }) => {
+  const [activeLink, setActiveLink] = useState('Home');
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    setIsOpen(false); 
+    setIsOpen(false);
+
+    if (link === 'Home') scrollToSection(heroRef);
+    if (link === 'My Work') scrollToSection(worksRef);
+    if (link === 'About Me') scrollToSection(educationRef);
+    if (link === 'My Skills') scrollToSection(skillsRef);
   };
 
   return (
@@ -22,33 +27,30 @@ const Navbar = () => {
 
         {/* Hamburger Menu */}
         <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-          <span className={`bar ${isOpen ? 'open' : ''}`}></span>
-          <span className={`bar ${isOpen ? 'open' : ''}`}></span>
-          <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
 
-        {/* Sliding Menu */}
         {/* Sliding Menu */}
         <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
           {['Home', 'My Work', 'About Me', 'My Skills', 'Download CV'].map((link) => (
             <li key={link} className="navbar-item">
               {link === 'Download CV' ? (
-                <a href = {cv} download="MAbdullahAbbasiCV.pdf" className="navbar-link">
+                <a href={cv} download="MAbdullahAbbasiCV.pdf" className="navbar-link cv-link">
                   {link}
                 </a>
               ) : (
-                <Link
-                  to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                <span
                   onClick={() => handleLinkClick(link)}
                   className={`navbar-link ${activeLink === link ? 'active' : ''}`}
                 >
                   {link}
-                </Link>
+                </span>
               )}
             </li>
           ))}
         </ul>
-
       </nav>
     </>
   );
