@@ -28,6 +28,7 @@ const Works = () => {
             className={`work-item ${hoveredIndex === index ? "hovered" : hoveredIndex !== null ? "shrunk" : ""}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
+            target="blank"
           >
             <div className="image-container">
               <img src={project.img} alt={project.title} className="work-image" />
