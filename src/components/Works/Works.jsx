@@ -10,10 +10,10 @@ const Works = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const projects = [
-    { img: reallinkImg, title: "RealLink - A real estate website", link: "/reallink" },
-    { img: recruitmentImg, title: "Recruitment System", link: "/recruitment" },
-    { img: autolms, title: "AutoLMS", link: "/autolms" },
-    { img: attendance, title: "Attendance Management System", link: "/ams" },
+    { img: reallinkImg, title: "RealLink - A real estate website", link: "https://github.com/REALink-cell/Realink" },
+    { img: recruitmentImg, title: "Recruitment System", link: "https://courageous-kulfi-113111.netlify.app/" },
+    { img: autolms, title: "AutoLMS", link: "https://autolms-rosy.vercel.app/" },
+    { img: attendance, title: "Attendance Management System", link: "https://github.com/MAbdullahAbbasi/AttendanceManagementSystem" },
   ];
 
   return (
